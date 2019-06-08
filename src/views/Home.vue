@@ -5,6 +5,7 @@
         v-layout(justify-center="" align-center="")
           v-flex(shrink="")
               h1 ニンニク入れますか
+              .spell(v-if="spellActive")
               h2 呪文
               h2 {{spell}}
         v-layout(row="" justify-center="")
@@ -37,8 +38,8 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class Home extends Vue {
   username: string = "";
-  drawer = true;
   active: number = 0;
+  spellActive = false;
   toppings: any = [
     {
       name: "ニンニク",
