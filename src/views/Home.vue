@@ -20,10 +20,7 @@
                                       v-radio(v-for="amount in amounts" :label="amount.title" :value="amount.value")
                       .text-xs-center.mt-3
                           v-btn(@click="next") 次へ
-                    v-divider
-                    v-card-actions
-                        v-btn(color="blue darken-1" flat="" @click="dialog = false") Close
-                        v-btn(color="blue darken-1" flat="" @click="showSpell()") Save
+                          v-btn(color="blue darken-1" flat="" @click="showSpell()") Save
         v-layout(align-center justify-center)
           .spell(v-if="spellActive")
             .font-weight-medium.headline {{spell}}
