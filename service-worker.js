@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.2b803b95c16e45775d5eafeacdb8044a.js"
+  "/precache-manifest.1f338c8e2f5b94d1f32c55398eeaef4e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "jiro-spell-generator"});
