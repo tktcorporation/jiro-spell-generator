@@ -1,16 +1,13 @@
 <template lang="pug">
   .home
     v-content
-      v-container(fill-height="")
-        v-layout(row="" justify-center="")
-          h1 ニンニク入れますか
-          .spell(v-if="spellActive")
-            h2 呪文
-            h2 {{spell}}
-          div
+      v-container()
+        v-layout(align-center justify-center)
+          .display-1.font-weight-regular ニンニク入れますか
+        v-layout(align-center justify-center)
             v-dialog(v-model="dialog" scrollable="" max-width="300px")
                 template(v-slot:activator="{ on }")
-                    v-btn(color="primary" dark="" v-on="on") Open Dialog
+                    v-btn(color="primary" dark="" v-on="on") 呪文生成
                 v-card
                     v-card-title 呪文構成
                     div
@@ -27,7 +24,9 @@
                     v-card-actions
                         v-btn(color="blue darken-1" flat="" @click="dialog = false") Close
                         v-btn(color="blue darken-1" flat="" @click="showSpell()") Save
-
+        v-layout(align-center justify-center)
+          .spell(v-if="spellActive")
+            .font-weight-medium.headline {{spell}}
 </template>
 
 <script lang="ts">
@@ -91,11 +90,35 @@ export default class Home extends Vue {
   }
 
   get spell(): any {
-    if (this.toppings[0].amount == 0) {
+    let nin = "";
+    let yasa = "";
+    let kara = "";
+    let abu = "";
+    if (this.toppings[0].amount !== 5) {
+      nin = `${this.toppings[0].name}${
+        this.amountSpells[this.toppings[0].amount]
+      }`;
     }
-    return `${this.toppings[0].name}${
-      this.amountSpells[this.toppings[0].amount]
-    }`;
+    if (this.toppings[1].amount !== 5) {
+      yasa = `${this.toppings[1].name}${
+        this.amountSpells[this.toppings[1].amount]
+      }`;
+    }
+    if (this.toppings[2].amount !== 5) {
+      kara = `${this.toppings[2].name}${
+        this.amountSpells[this.toppings[2].amount]
+      }`;
+    }
+    if (this.toppings[3].amount !== 5) {
+      abu = `${this.toppings[3].name}${
+        this.amountSpells[this.toppings[3].amount]
+      }`;
+    }
+    let result = `${nin}${yasa}${abu}${kara}`;
+    if (result == "") {
+      result = "";
+    }
+    return `${nin}${yasa}${abu}${kara}`;
   }
 
   private showSpell() {
