@@ -68,7 +68,7 @@ export default class Home extends Vue {
       value: 2
     },
     {
-      title: "フードファイター",
+      title: "とてつもなく多い",
       value: "3"
     }
   ];
