@@ -17,7 +17,7 @@
     "amazon-cognito-identity-js": "^3.0.12",
     "aws-amplify": "1.1.10",
     "aws-sdk": "^2.454.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.4",
     "core-js": "^2.6.5",
     "gh-pages": "^2.0.1",
