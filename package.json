@@ -43,7 +43,7 @@
     "@vue/cli-service": "^3.7.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "chai": "^4.1.2",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
